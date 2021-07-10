@@ -21,6 +21,10 @@ app.get('/directory', (req,res) => {
     res.sendFile(path.join(__dirname, '/directory.html'));
 })
 
+app.get('/calendar', (req,res) => {
+    res.sendFile(path.join(__dirname, '/calendar.html'))
+})
+
 app.listen(3000, () => {
     console.log('I think its working boss');
 });

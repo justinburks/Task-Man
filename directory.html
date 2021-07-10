@@ -9,12 +9,151 @@
 <body>
     <nav>
         <ul>
-            <li>version 1</li>
-            <li>etc</li>
-            <li>etc</li>
-            <li>etc</li>
-            <li>etc</li>
+            <li>v1 - mm.yy</li>
+            <li>v2 - mm.yy</li>
+            <li>v3 - mm.yy</li>
+            <li>v4 - mm.yy</li>
+            <li>v5 - mm.yy</li>
         </ul>
     </nav>
+    <div class="liModal"> 
+                <h2>v1</h2>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+        <li> desc - dd/mm/yy </li>
+    </div>
+
+    <div class='liveUpdates'>
+        <div class='updateHeader'>
+            Current version
+            created mm/dd/yyyy - 00:00
+            sessions: INT | contributors: INT
+        </div>
+        <div class='statusUpdates'>
+            <li>d/m - 2 Pending 10 Complete</li>
+            <li>d/m -</li>
+            <li>d/m -</li>
+            <li>d/m -</li>
+        </div>
+        <div class='calendarUpdates'>   
+            <h2>Goals - mainGoal + date</h2>
+                <h3> Key Dates</h3>
+                    <li>added this</li>
+                    <li>removed that</li>
+                    <li>tweeked these</li>
+        </div>
+    </div>
+
+    </div>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        body {
+            background: black;
+        }
+        ul {
+            padding: 30px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            width: 20%;
+            top: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: transparent;
+        }
+        li {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            border: 1px rgba(0, 0, 0, 0.37) solid;
+            background: black;
+            color: cornsilk;
+        }   
+        li:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: transparent;
+        }
+        li:hover {
+            background: cornsilk;
+            color: black;
+        }
+       
+        .liveUpdates {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            border-left: 1px solid white;
+            padding: 2%;
+            color: cornsilk;
+    
+        }
+
+        .liModal {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 25%;
+            margin-top: 8%;
+            transform: translateX(-800px);
+        }
+        .liModal li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20%;
+        }
+        .liModal h2 {
+            color: cornsilk;
+        }
+        
+        .calendarUpdates {
+            margin-top: 15%;
+            border-top: 1px solid cornsilk;
+        }
+        .calendarUpdates h2 {
+            margin-top: 15%;
+        }
+
+        .calendarUpdates h3 {
+            margin: 20%;
+        }
+    </style>
+    <script> 
+    const primaryListItems = document.querySelectorAll('li');
+    const adjListItems = document.querySelector('.liModal');
+
+    primaryListItems.forEach( li => {
+        li.addEventListener('click', () => {
+            // slide ajacent list 
+            adjListItems.style.setProperty('transform', 'translateX(0)')
+        })
+    })
+
+    
+    </script>
 </body>
 </html>

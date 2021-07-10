@@ -7,7 +7,116 @@
     <title>Contact</title>
 </head>
 <body>
-    <h2>Hiring Man</h2>
-    <h2>Feedback Man</h2>
+
+    <div class="contact">
+        <div class='tabList'>
+            <h2>Collaborate</h2>
+            <h2>Feedback</h2>
+        </div>
+    </div>
+
+<style>
+    body,html {
+        overflow: hidden;
+    }
+
+            body {
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(
+     to right top,
+     #cf4af3,
+     #e73bd7,
+     #f631bc,
+     #fd31a2,
+     #ff3a8b,
+     #ff4b78,
+     #ff5e68,
+     #ff705c,
+     #ff8c51,
+     #ffaa49,
+     #ffc848,
+     #ffe652
+    ) no-repeat;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background: rgba(177, 144, 172, 0.25);
+    width: 40%;
+    height: 60%;
+    border-radius: 50px;
+
+}
+.contact::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background:linear-gradient(
+     to right top,
+     #ce4af344,
+     #e73bd744,
+     #f631bc44,
+     #fd31a244,
+     #ff3a8b44,
+     #ff4b7844,
+     #ff5e6844,
+     #ff705c44,
+     #ff8c5144,
+     #ffaa4944,
+     #ffc84844,
+     #ffe65244
+    ) no-repeat;
+}
+.contact:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: rgba(236, 71, 71, 0.05);
+    z-index: -1;
+}
+
+
+.tabList {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    color: rgba(245, 245, 245, 0.8);
+}
+    /*          TEST (ACTIVE DOTS)
+    
+    h2:after {
+        content: '';
+        position: absolute;
+        top: 120%;
+        height: 25%;
+        width: 2%;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.096);
+        transform: translateX(-500%);
+
+    } 
+    
+    */
+
+
+</style>
 </body>
 </html>
